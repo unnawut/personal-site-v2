@@ -7,6 +7,7 @@ body {
 
 p {
   max-width: 40rem;
+  line-height: 1.75;
 }
 
 a {
