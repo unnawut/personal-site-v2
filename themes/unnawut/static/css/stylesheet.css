@@ -25,6 +25,13 @@ footer {
 }
 
 /*
+  Thai font
+*/
+.thai-font {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+/*
   Main container
 */
 #container {
