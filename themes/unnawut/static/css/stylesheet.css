@@ -1,0 +1,138 @@
+body {
+  color: #000b;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14pt;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  max-width: 40rem;
+}
+
+a {
+  color: #07c;
+  text-decoration: none;
+  border-bottom: 1px solid #0003;
+}
+
+a:hover {
+  color: #004373;
+  border-bottom: 1px solid #0003;
+}
+
+footer {
+}
+
+/*
+  Main container
+*/
+#container {
+  margin: auto;
+  max-width: 55em;
+  padding: 0 3rem;
+}
+
+/*
+  Site header
+*/
+
+#site-header {
+  margin-top: 4rem;
+}
+
+/*
+  Site title
+*/
+#site-title {
+  color: #000f;
+  font-weight: bold;
+}
+
+#site-title a {
+  color: #000f;
+  border-bottom: 0;
+}
+
+#site-title a:hover {
+  border-bottom: 1px solid #0006;
+}
+
+/*
+  Navigation
+*/
+#page-nav {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+#page-nav a {
+  color: #000b;
+  border-bottom: 0;
+}
+
+#page-nav a:hover {
+  border-bottom: 1px solid #0006;
+}
+
+#page-nav .nav-item {
+  margin-right: 1rem;
+}
+
+#page-nav .nav-item.active {
+  border-bottom: 2px solid #0006;
+}
+
+/*
+  Site body
+*/
+#site-body {
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 3rem;
+}
+
+#site-body h1 {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+/*
+  Blog post header
+*/
+.blog-post-header {
+  max-width: 40rem;
+}
+
+/*
+  Blog post content
+*/
+.blog-post-content {
+}
+
+/*
+  Footer
+*/
+#site-footer {
+  color: #0009;
+  font-size: .75rem;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+}
+
+/*
+  Code
+*/
+pre {
+  background-color: var(--c-wash);
+  padding: calc(var(--unit) * 2);
+  border-radius: var(--unit);
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Fira Mono", "Menlo", monospace;
+}
+
+pre code {
+  display: block;
+}
