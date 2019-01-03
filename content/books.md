@@ -1,4 +1,4 @@
 ---
-title: "Book Recommendations"
+title: "Book recommendations"
 draft: true
 ---
