@@ -1,4 +1,3 @@
 ---
 title: "Wishlist"
-draft: true
 ---

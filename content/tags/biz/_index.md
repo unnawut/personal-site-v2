@@ -1,4 +1,4 @@
 ---
 title: "Thoughts on Business"
-draft: true
+url: "/biz"
 ---
