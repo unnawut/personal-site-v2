@@ -2,3 +2,6 @@ baseURL = "https://unnawut.com/"
 languageCode = "th-th"
 title = "Unnawut Leepaisalsuwanna"
 theme = "unnawut"
+
+[taxonomies]
+  tag = "tags"
