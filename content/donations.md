@@ -27,8 +27,10 @@ I am extremely grateful to live during this time. You have made this world a bet
 ## Pending
 - [byobu](http://byobu.co/about.html)
 - [Sequel Pro](https://sequelpro.com/donate)
+- [Have I Been Pwned](https://haveibeenpwned.com/Donate)
 - [Vim](http://www.vim.org/sponsor/)
 - [Soda Reloaded](https://github.com/Miw0/SoDaReloaded-Theme)
+- [ETH Gas Station](https://ethgasstation.info)
 
 ## Projects I wish I could pay for (they're not accepting payments)
 - [Duplicity](http://duplicity.nongnu.org/)
