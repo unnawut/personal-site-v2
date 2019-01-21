@@ -30,6 +30,8 @@ I am extremely grateful to live during this time. You have made this world a bet
 - [Have I Been Pwned](https://haveibeenpwned.com/Donate)
 - [Vim](http://www.vim.org/sponsor/)
 - [Soda Reloaded](https://github.com/Miw0/SoDaReloaded-Theme)
+- [MyEtherWallet](https://etherscan.io/address/mewtopia.eth)
+- [Etherscan](https://etherscan.io/address/0x71c7656ec7ab88b098defb751b7401b5f6d8976f)
 - [ETH Gas Station](https://ethgasstation.info)
 
 ## Projects I wish I could pay for (they're not accepting payments)
