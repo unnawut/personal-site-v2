@@ -33,6 +33,7 @@ I am extremely grateful to live during this time. You have made this world a bet
 - [Have I Been Pwned](https://haveibeenpwned.com/Donate)
 - [Vim](http://www.vim.org/sponsor/)
 - [Soda Reloaded](https://github.com/Miw0/SoDaReloaded-Theme)
+- [Read the Docs](https://readthedocs.org/sustainability/)
 
 ## Projects I wish I could pay for (they're not accepting payments)
 - [Duplicity](http://duplicity.nongnu.org/)
