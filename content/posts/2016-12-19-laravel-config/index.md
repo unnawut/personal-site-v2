@@ -1,7 +1,7 @@
 ---
 title: "Don’t use Laravel’s config() inside config files"
 date: 2016-12-19T18:00:00+07:00
-tags: ["tech", "php", "laravel"]
+tags: ["tech", "programming", "php", "laravel"]
 language: "english"
 ---
 

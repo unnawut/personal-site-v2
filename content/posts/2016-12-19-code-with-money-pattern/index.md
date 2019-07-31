@@ -1,7 +1,7 @@
 ---
 title: "ให้เงินทำงานด้วย Money Pattern"
 date: 2016-12-19T12:00:00+07:00
-tags: ["tech", "php"]
+tags: ["tech", "programming", "php"]
 language: "thai"
 ---
 
