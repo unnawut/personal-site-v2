@@ -1,7 +1,7 @@
 ---
 title: "Load Testing ด้วย Apache JMeter"
 date: 2016-09-30T12:00:00+07:00
-tags: ["tech"]
+tags: ["tech", "testing"]
 language: "thai"
 ---
 
