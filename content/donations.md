@@ -1,6 +1,13 @@
 ---
-title: "Donations toward software"
+title: "Donations"
 ---
+
+# Social and Environmental Issues
+
+## Recurring
+- [COTAP](https://cotap.org) - 10 USD/month (~1 CO2-tonne/month) since Aug 2019
+
+# Software
 
 I rely on many of the quality software below to improve my life. Many of them helped me
 making a living for the past few years. The people behind these great products below generously
