@@ -23,9 +23,10 @@ I am extremely grateful to live during this time. You have made this world a bet
 - [Homebrew](https://brew.sh/) - 5 USD/month since Dec 2017
 
 ## One-time
+- [CreativeCommons](https://us.netdonor.net/page/6650/donate/1) - 20 USD (2018)
 - [MyEtherWallet](https://etherscan.io/address/mewtopia.eth) - [10 DAI](https://etherscan.io/tx/0xe511a273781da0a6af96955832799e93efa727271d5ad4a0d2c50fd9278fc703) (2018)
 - [Etherscan](https://etherscan.io/address/0x71c7656ec7ab88b098defb751b7401b5f6d8976f) - [10 DAI](https://etherscan.io/tx/0xb7a865be593c464f2a16345677915bed9d833c64667be0e05e25056ad7bd4565) (2018)
-- [ETH Gas Station](https://ethgasstation.info) - [10 DAI](https://etherscan.io/tx/0xf2a586a83ebe756feea07ab44e030730f4411cf060848c7141a43e8938efa84a) 2018
+- [ETH Gas Station](https://ethgasstation.info) - [10 DAI](https://etherscan.io/tx/0xf2a586a83ebe756feea07ab44e030730f4411cf060848c7141a43e8938efa84a) (2018)
 - [Transmission](https://transmissionbt.com/donate/) - 10 USD (2017)
 - [VideoLAN](https://www.videolan.org/contribute.html) - 10 USD (2017)
 - [SMS Backup+](https://github.com/jberkel/sms-backup-plus) - 5 USD (2017)
