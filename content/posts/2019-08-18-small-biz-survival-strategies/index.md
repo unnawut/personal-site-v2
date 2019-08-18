@@ -1,6 +1,6 @@
 ---
 title: "Today I Learned: Competing with Giants: Survival Strategies for Local Companies in Emerging Markets
-date: 2019-08-18T19:19:00+07:00
+date: 2019-08-18T19:27:00+07:00
 tags: ["business"]
 language: "english"
 ---
