@@ -1,5 +1,5 @@
 ---
-title: "The Psychology of Money by Morgan Housel"
+title: "[Article Review] The Psychology of Money by Morgan Housel"
 date: 2019-09-28T14:28:00+07:00
 tags: ["business", "finance"]
 language: "english"
