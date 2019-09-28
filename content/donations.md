@@ -2,12 +2,12 @@
 title: "Donations"
 ---
 
-# Social and Environmental Issues
+## Social and Environmental Issues
 
-## Recurring
+### Recurring
 - [COTAP](https://cotap.org) - 10 USD/month (~1 CO2-tonne/month) since Aug 2019
 
-# Software
+## Software
 
 I rely on many of the quality software below to improve my life. Many of them helped me
 making a living for the past few years. The people behind these great products below generously
@@ -18,11 +18,11 @@ that I have made so far towards those software projects. I hope to contribute mo
 
 I am extremely grateful to live during this time. You have made this world a better place to live in.
 
-## Recurring
+### Recurring
 - [iTerm2](https://iterm2.com/donate.html) - 5 USD/month since Dec 2017
 - [Homebrew](https://brew.sh/) - 5 USD/month since Dec 2017
 
-## One-time
+### One-time
 - [CreativeCommons](https://us.netdonor.net/page/6650/donate/1) - 20 USD (2018)
 - [MyEtherWallet](https://etherscan.io/address/mewtopia.eth) - [10 DAI](https://etherscan.io/tx/0xe511a273781da0a6af96955832799e93efa727271d5ad4a0d2c50fd9278fc703) (2018)
 - [Etherscan](https://etherscan.io/address/0x71c7656ec7ab88b098defb751b7401b5f6d8976f) - [10 DAI](https://etherscan.io/tx/0xb7a865be593c464f2a16345677915bed9d833c64667be0e05e25056ad7bd4565) (2018)
@@ -35,7 +35,7 @@ I am extremely grateful to live during this time. You have made this world a bet
 - [Wikipedia](https://wikimediafoundation.org/wiki/Ways_to_Give) - 7 USD (2010), 7 USD (2014)
 - [Cyberduck](https://cyberduck.io/donate/) - 5 EUR (2010)
 
-## Pending
+### Pending
 - [byobu](http://byobu.co/about.html)
 - [Sequel Pro](https://sequelpro.com/donate)
 - [Have I Been Pwned](https://haveibeenpwned.com/Donate)
@@ -44,5 +44,5 @@ I am extremely grateful to live during this time. You have made this world a bet
 - [Read the Docs](https://readthedocs.org/sustainability/)
 - [Daniel Stenberge](https://github.com/users/bagder/sponsorship) - The creator of curl
 
-## Projects I wish I could pay for (they're not accepting payments)
+### Projects I wish I could pay for (they're not accepting payments)
 - [Duplicity](http://duplicity.nongnu.org/)
