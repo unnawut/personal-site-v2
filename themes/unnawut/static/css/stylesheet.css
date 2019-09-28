@@ -32,6 +32,15 @@ blockquote {
   padding: 0 1rem;
 }
 
+figure {
+  max-width: 35rem;
+}
+
+figure.fullwidth {
+  max-width: none;
+  margin: 0;
+}
+
 img {
   max-width: 100%;
 }

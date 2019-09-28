@@ -11,7 +11,7 @@ _a.k.a. Underlying OS behavior can impact your web application’s behavior._
 
 _Update: As of 2017–10–12, config file loading in Laravel 5.5 is now ordered by file names. See the pull request [[5.5] Ensure config load order across multiple installations.](https://github.com/laravel/framework/pull/21634)_
 
-{{<figure src="resources/01-laravel-load-configuration.png" title="A code excerpt from Laravel’s Illuminate\Foundation\Bootstrap\LoadConfiguration">}}
+{{<figure src="resources/01-laravel-load-configuration.png" title="A code excerpt from Laravel’s Illuminate\Foundation\Bootstrap\LoadConfiguration" class="fullwidth">}}
 
 Last week we were working on implementing a feature for a Laravel project running on load-balanced EC2 instances. The feature that we built required two configuration values which normally would reside happily within a file or two in the `config/` folder.
 
