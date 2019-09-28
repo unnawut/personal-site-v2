@@ -53,6 +53,10 @@ figcaption h4 {
   color: #0009;
 }
 
+.highlight pre {
+  padding: 1.5rem 2rem;
+}
+
 footer {
 }
 
