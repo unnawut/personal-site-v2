@@ -15,8 +15,6 @@ In this post, I'd like to suggest a way to create test helpers that can be reuse
 
 I believe this post presents an exact use case where macros allow us to have explicit, concise and clean tests at the same time.
 
------
-
 ## The problem
 
 To begin, let's say we have two schemas called `User` and `Account`. Each of them contain a `name` field that should not be blank. We could add tests like this:
@@ -48,8 +46,6 @@ end
 ```
 
 Imagine if you have a dozen of schemas, most of which will require a check for blank fields. How much of your test code will be redundant? And how incomprehensible it would be, as the test code gets larger and larger?
-
------
 
 ## Interim solution: Helper functions
 
@@ -91,8 +87,6 @@ end
 ```
 
 While above works great, the problem is that it is still cluttered when you want many assertions in a single test case, or you rather prefer lean test cases by testing one thing at a time.
-
------
 
 ## The real deal: Macros as test helpers
 
@@ -165,8 +159,6 @@ defmodule UserTest do
 end
 ```
 
------
-
 ## Conclusion
 
 We have been using this test-helper-as-a-macro approach in our project at [`omisego/ewallet`](https://github.com/omisego/ewallet) with satisfaction. It has worked well so far with the following benefits:
@@ -177,7 +169,5 @@ We have been using this test-helper-as-a-macro approach in our project at [`omis
 4. We're not hacking how ExUnit works, relying purely on ExUnit's public API.
 
 If you find this approach interesting, you can find real-world examples of the helper macros at [`EWalletDB.SchemaCase`](https://github.com/omisego/ewallet/blob/master/apps/ewallet_db/test/support/schema_case.ex), and usage at [`EWalletDB.RoleTest`](https://github.com/omisego/ewallet/blob/master/apps/ewallet_db/test/ewallet_db/role_test.exs).
-
------
 
 What do you think? Do you find any drawback or a better solution? Let me know!
