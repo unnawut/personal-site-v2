@@ -8,3 +8,4 @@ draft: true
 
 https://blog.jessfraz.com/post/leadership-ci/
 https://knowyourteam.com/blog/2018/01/11/the-8-best-questions-to-ask-during-a-one-on-one-meeting/
+https://doist.com/blog/asynchronous-communication/
