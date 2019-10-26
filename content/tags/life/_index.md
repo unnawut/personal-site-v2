@@ -1,4 +1,0 @@
----
-title: "Life"
-url: "/life"
----

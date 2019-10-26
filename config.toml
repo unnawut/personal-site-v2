@@ -1,8 +1,13 @@
 baseURL = "https://unnawut.com/"
 languageCode = "th-th"
 title = "Unnawut Leepaisalsuwanna"
-theme = "unnawut"
+theme = "book"
 pygmentsCodeFences = true
 
 [taxonomies]
   tag = "tags"
+
+[params]
+  BookToC = 3
+  BookSection = '*'
+  BookSearch = true

@@ -1,6 +1,7 @@
 ---
 title: "About"
 showtitle: false
+type: docs
 ---
 
 Hi. My name is Unnawut. You may also know me by my Thai nickname, O (pronounced a neutral "Oh").
