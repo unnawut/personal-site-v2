@@ -7,8 +7,6 @@ language: "english"
 aliases: ["/posts/2016-12-19-laravel-config"]
 ---
 
-# Don’t use Laravel’s config() inside config files
-
 _Originally published at [blog.maqe.com](https://blog.maqe.com/dont-use-laravel-s-config-inside-config-files-40e2c8207225)_
 
 _a.k.a. Underlying OS behavior can impact your web application’s behavior._

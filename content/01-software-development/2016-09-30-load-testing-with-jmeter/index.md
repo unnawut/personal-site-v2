@@ -7,8 +7,6 @@ language: "thai"
 aliases: ["/posts/2016-09-30-load-testing-with-jmeter"]
 ---
 
-# Load Testing ด้วย Apache JMeter
-
 _เผยแพร่ครั้งแรกที่ [blog.maqe.com](https://blog.maqe.com/load-testing-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%97%E0%B8%B8%E0%B9%88%E0%B8%87%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-apache-jmeter-155c0389b697)_
 
 เมื่อช่วงต้นปีที่แล้ว เว็บไซต์ที่บริษัทดูแลอยู่เกิด user surge ขึ้นเป็นช่วงระยะเวลาสั้นๆ ประมาณ 2 สัปดาห์ ถึงแม้ว่าเหตุการณ์จะจบลงอย่างน่าพอใจ สิ่งที่เกิดขึ้นทำให้ทีมต้องกลับมานั่งคิดขยับขยาย infrastructure ที่มีอยู่พอสมควร

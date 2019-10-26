@@ -7,8 +7,6 @@ language: "thai"
 aliases: ["/posts/2016-12-19-code-with-money-pattern"]
 ---
 
-# ให้เงินทำงานด้วย Money Pattern
-
 _เผยแพร่ครั้งแรกที่ [blog.maqe.com](https://blog.maqe.com/why-code-with-money-pattern-5d5b98c3252d)_
 
 {{<figure src="resources/01-money-php.png" class="fullwidth">}}

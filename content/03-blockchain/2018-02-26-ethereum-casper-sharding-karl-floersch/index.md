@@ -7,8 +7,6 @@ language: "thai"
 aliases: ["/posts/2018-02-26-ethereum-casper-sharding-karl-floersch"]
 ---
 
-# สรุปทอล์ก Ethereum, Casper และ Sharding โดย Karl Floersch
-
 _Originally published at [blog.omisego.network](https://blog.omisego.network/%E0%B8%AA%E0%B8%A3%E0%B8%B8%E0%B8%9B%E0%B8%97%E0%B8%AD%E0%B8%A5%E0%B9%8C%E0%B8%81-ethereum-casper-%E0%B9%81%E0%B8%A5%E0%B8%B0-sharding-%E0%B9%82%E0%B8%94%E0%B8%A2-karl-floersch-fed1f630002a)_
 
 {{<figure src="resources/01-meetup-cover.png">}}

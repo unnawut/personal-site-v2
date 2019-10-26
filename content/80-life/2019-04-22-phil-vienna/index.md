@@ -1,5 +1,5 @@
 ---
-title: "Phil — The best cafe in Vienna"
+title: "Phil — My favorite cafe in Vienna"
 date: 2019-04-22T23:26:00+07:00
 tags: ["life"]
 language: "english"
@@ -7,8 +7,6 @@ bookToC: false
 # Alias is used to redirect from old urls used by the previous template
 aliases: ["/posts/2019-04-22-phil-vienna"]
 ---
-
-# Phil — The best cafe in Vienna
 
 Despite so many cafes in Vienna, Phil, in my opinion, is the best one by far. I came here for a few hours of relax and work for both days of my stay in Vienna.
 

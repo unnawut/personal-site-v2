@@ -8,8 +8,6 @@ bookToC: false
 aliases: ["/posts/2019-09-28-psychology-of-money"]
 ---
 
-# [Article Review] The Psychology of Money by Morgan Housel
-
 This article, [The Psychology of Money](https://www.collaborativefund.com/blog/the-psychology-of-money/), was recommended to me by [Ino Murko](https://github.com/InoMurko). It's a great read on personal investment.
 
 The author described 20 flaws, biases, and causes of bad behavior when people deal with money. Below are my favorite excerpts.

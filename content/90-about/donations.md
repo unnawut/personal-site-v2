@@ -5,8 +5,6 @@ bookToC: false
 aliases: ["/donations"]
 ---
 
-# Donations
-
 ## Social and Environmental Issues
 
 ### Recurring

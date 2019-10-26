@@ -1,1 +1,21 @@
 /* To be overridden by theme user, scss variables are also accessible here */
+
+article {
+  max-width: 46rem;
+}
+
+.book-section {
+  .section-header {
+    font-weight: bold;
+  }
+
+  .section-page-list {
+    display: none;
+  }
+
+  &.section-active {
+    .section-page-list {
+      display: block;
+    }
+  }
+}

@@ -8,8 +8,6 @@ bookToC: false
 aliases: ["/posts/2019-05-04-koom-koom-coffee"]
 ---
 
-# Koom Koom — Good coffee beans at affordable prices
-
 First, a bold disclaimer that I'm no coffee expert, but I do have a difficult time finding coffee beans that I like. My coffee preference gradually moved towards bolder drinks, i.e. I started drinking coffee with iced mocha, then cappucino, then finally settling down with espresso.
 
 Since I started drinking espresso, I noticed I've become more picky about the bean. I suppose it's to do with espresso being pretty much concentrated coffee, not diluted in milk or anything other than a small amount of water. And buying a bag of coffee beans only to find out that I dislike it after a shot brings much sadness to life.

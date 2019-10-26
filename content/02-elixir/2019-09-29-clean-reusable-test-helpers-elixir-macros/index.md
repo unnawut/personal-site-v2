@@ -7,8 +7,6 @@ language: "english"
 aliases: ["/posts/2019-09-29-clean-reusable-test-helpers-elixir-macros"]
 ---
 
-# Clean and reusable test helpers with Elixir macros
-
 _Originally published at [dev.to](https://dev.to/unnawut/clean-and-reusable-test-helpers-with-elixir-macros-26e5)_.
 
 Sometimes, seemingly redundant tests could serve as an assurance that our code works. While it's possible to abstract away the tests to a higher level, it may mean sacrificing readability.

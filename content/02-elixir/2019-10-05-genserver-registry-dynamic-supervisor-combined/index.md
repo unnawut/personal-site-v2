@@ -7,8 +7,6 @@ language: "english"
 aliases: ["/posts/2019-10-05-genserver-registry-dynamic-supervisor-combined"]
 ---
 
-# GenServer, Registry, DynamicSupervisor. Combined.
-
 _Originally published at [dev.to](https://dev.to/unnawut/genserver-registry-dynamicsupervisor-combined-4i9p)_.
 
 In [omisego/ewallet](https://github.com/omisego/ewallet), we're building/refactoring a `TransactionTracker` that listens to a huge number of transactions (think money transactions) that also happen to be residing in an external source that is slow to update (Hello, Ethereum).
