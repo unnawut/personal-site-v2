@@ -9,6 +9,7 @@ Current:
 
 - Head of Venture Builder at [SCB 10X](https://www.scb10x.com)
 - RocketPool [node operator](https://rocketscan.io/node/0x1c19d4f71257ef0f8ed59b8bfba655fbaa0cb96b)
+- Gnosis Chain [validator](https://gnosischa.in/dashboard?validators=176885,176886,176887,177975,177976,177977,178885,178886,178887,178892,178893,178894,185089,185090,185091,185092,185093,185094)
 - Sepolia RPC operator at [sepolia.org](https://sepolia.org/)
 
 Past:
