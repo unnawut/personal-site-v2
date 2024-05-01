@@ -6,6 +6,7 @@ showtitle: false
 Hi. My name is Unnawut. You may also know me by my Thai nickname, O (pronounced a neutral "Oh").
 
 Current:
+
 - Independent builder/researcher
 - Contributor at [EthPadThai](https://twitter.com/ethpadthai)
 - Blockchain Technical Advisor at [SCB 10X](https://www.scb10x.com)
@@ -14,6 +15,7 @@ Current:
 - Sepolia RPC operator at [sepolia.org](https://sepolia.org/)
 
 Past:
+
 - Head of Venture Builder at [SCB 10X](https://www.scb10x.com), 2022-2024
 - Blockchain Lead at [SCB 10X](https://www.scb10x.com), 2021 - 2022
 - Software Engineer on [Plasma](https://ethereum.org/en/developers/docs/scaling/plasma/) [implementation](https://github.com/omgnetwork/elixir-omg/pulls?q=is%3Apr+author%3Aunnawut) and [e-wallet](https://github.com/omgnetwork/ewallet/pulls?q=is%3Apr+author%3Aunnawut) at [OMG Network](https://github.com/omgnetwork) (prev. OmiseGO), 2017 - 2021
