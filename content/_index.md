@@ -7,8 +7,9 @@ Hi. My name is Unnawut. You may also know me by my Thai nickname, O (pronounced 
 
 Current:
 
-- Independent builder/researcher
-- Contributor at [EthPadThai](https://twitter.com/ethpadthai)
+- Independent web3 builder/researcher
+- Community Supporter at [Devcon 7 SEA](https://devcon.org)
+- Volunteer at [EthPadThai](https://twitter.com/ethpadthai)
 - Blockchain Technical Advisor at [SCB 10X](https://www.scb10x.com)
 - RocketPool [node operator](https://rocketscan.io/node/0x1c19d4f71257ef0f8ed59b8bfba655fbaa0cb96b)
 - Gnosis Chain [validator](https://gnosischa.in/dashboard?validators=176885,176886,176887,177975,177976,177977,178885,178886,178887,178892,178893,178894,185089,185090,185091,185092,185093,185094)
