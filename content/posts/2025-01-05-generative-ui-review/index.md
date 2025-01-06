@@ -161,7 +161,7 @@ I dug into AI web design tools with the mindset that the AI can do it all for me
 
 - "AI web design" is a very generic term. Do you want UX wireframes? Prototypes? Visual designs? A desktop site? A mobile app? A landing page or a highly-interactive web app? AI design tools are not created equally.
 
-    - Some work for some use cases (e.g. [Creatie](https://creatie.ai/) and [UX Pilot](https://uxpilot.ai/) seem good for apps)
+    - Some work for some use cases (e.g. [Creatie](https://creatie.ai/), [UX Pilot](https://uxpilot.ai/) and [v0](https://v0.dev/) seem good for apps)
     
     - Some others work for other use cases (e.g. [Galileo](https://www.usegalileo.ai/) and [Uizard](https://uizard.io/) for info sites)
     
