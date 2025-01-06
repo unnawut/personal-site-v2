@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Ethereum Analytics Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius='small'></script>
+</head>
+<body class="bg-white">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-auto" src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Ethereum Analytics">                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="!rounded-button bg-custom text-white px-4 py-2 text-sm font-medium">Connect Wallet</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-20">            <div class="text-center">
+                <h1 class="text-6xl font-bold tracking-tight text-custom mb-8">$89.2B</h1>                <p class="text-xl text-gray-600">Total Value Locked in Ethereum DeFi</p>
+            </div>
+        </section>
+
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12 overflow-x-auto">            <div class="flex space-x-8 min-w-max">
+                <div class="bg-white p-6 rounded-lg border border-gray-100 min-w-[280px]">                    <div class="text-sm text-gray-500 mb-2">Market Cap</div>
+                    <div class="font-mono text-2xl font-medium">$234.5B</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-100 min-w-[280px]">
+                    <div class="text-sm text-gray-500 mb-2">Daily Transactions</div>
+                    <div class="font-mono text-2xl font-medium">1.2M</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-100 min-w-[280px]">                    <div class="text-sm text-gray-500 mb-2">Active Addresses</div>
+                    <div class="font-mono text-2xl font-medium">892.3K</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-100 min-w-[280px]">
+                    <div class="text-sm text-gray-500 mb-2">Average Gas (Gwei)</div>
+                    <div class="font-mono text-2xl font-medium">25.4</div>
+                </div>
+            </div>        </section>
+
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">                <div class="bg-white p-6 rounded-lg border border-gray-100">
+                    <h3 class="text-lg font-medium mb-4">Daily Active Users</h3>
+                    <div id="chart1" class="h-64"></div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-100">                    <h3 class="text-lg font-medium mb-4">Transaction Volume</h3>
+                    <div id="chart2" class="h-64"></div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-100">
+                    <h3 class="text-lg font-medium mb-4">Gas Price History</h3>
+                    <div id="chart3" class="h-64"></div>
+                </div>
+            </div>
+        </section>        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gray-50">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">                <div>
+                    <h2 class="text-4xl font-bold mb-6">Network Growth</h2>
+                    <div class="space-y-8">                        <div>
+                            <div class="text-5xl font-bold mb-2">2.1M</div>
+                            <div class="text-gray-600">Smart Contracts Deployed</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-bold mb-2">142M</div>
+                            <div class="text-gray-600">Total Addresses</div>
+                        </div>
+                    </div>                </div>
+                <div class="bg-white p-8 rounded-lg border border-gray-100">
+                    <div id="chart4" class="h-96"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg border border-gray-100">
+                    <button class="flex items-center justify-between w-full text-left">                        <h3 class="text-lg font-medium">Top DeFi Protocols</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mt-4">
+                        <div id="chart5" class="h-64"></div>                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-100">
+                    <button class="flex items-center justify-between w-full text-left">                        <h3 class="text-lg font-medium">DEX Volume</h3>
+                        <i class="fas fa-chevron-down"></i>                    </button>
+                    <div class="mt-4">
+                        <div id="chart6" class="h-64"></div>                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg border border-gray-100">                    <h3 class="text-lg font-medium mb-4">GitHub Activity</h3>
+                    <div class="space-y-4">
+                        <div>                            <div class="text-3xl font-bold mb-1">4,892</div>
+                            <div class="text-sm text-gray-500">Weekly Commits</div>
+                        </div>
+                        <div id="chart7" class="h-32"></div>
+                    </div>                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-100">
+                    <h3 class="text-lg font-medium mb-4">Active Developers</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-3xl font-bold mb-1">892</div>
+                            <div class="text-sm text-gray-500">Monthly Active</div>
+                        </div>
+                        <div id="chart8" class="h-32"></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-100">                    <h3 class="text-lg font-medium mb-4">Pull Requests</h3>
+                    <div class="space-y-4">
+                        <div>                            <div class="text-3xl font-bold mb-1">1,243</div>
+                            <div class="text-sm text-gray-500">Open PRs</div>
+                        </div>
+                        <div id="chart9" class="h-32"></div>
+                    </div>                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-100">        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">                <div>
+                    <h4 class="text-sm font-medium text-gray-900 mb-4">Data Sources</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">                        <li>Etherscan</li>
+                        <li>DeFi Pulse</li>
+                        <li>Dune Analytics</li>                        <li>CoinGecko</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-medium text-gray-900 mb-4">Network Stats</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>Block Height: 18,234,892</li>                        <li>Node Count: 5,234</li>
+                        <li>Hash Rate: 892 TH/s</li>
+                        <li>Network Difficulty: 12.4T</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-medium text-gray-900 mb-4">Latest Blocks</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>18,234,892 (2 mins ago)</li>                        <li>18,234,891 (4 mins ago)</li>
+                        <li>18,234,890 (5 mins ago)</li>
+                        <li>18,234,889 (7 mins ago)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-medium text-gray-900 mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>Documentation</li>
+                        <li>API Reference</li>
+                        <li>GitHub</li>
+                        <li>Status</li>
+                    </ul>
+                </div>            </div>
+        </div>
+    </footer>
+
+    <script>
+        function createChart(id, option) {
+            const chart = echarts.init(document.getElementById(id));
+            option.animation = false;
+            chart.setOption(option);
+        }
+
+        const commonOptions = {
+            grid: { top: 8, right: 8, bottom: 24, left: 36 },
+            tooltip: { trigger: 'axis' },
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                boundaryGap: false
+            },
+            yAxis: { type: 'value' }
+        };
+
+        createChart('chart1', {
+            ...commonOptions,
+            series: [{
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: 'line',
+                smooth: true,
+                lineStyle: { color: '#000' }
+            }]
+        });
+
+        createChart('chart2', {
+            ...commonOptions,
+            series: [{
+                data: [120, 200, 150, 80, 70, 110, 130],
+                type: 'line',
+                smooth: true,
+                lineStyle: { color: '#000' }
+            }]
+        });
+
+        createChart('chart3', {
+            ...commonOptions,
+            series: [{
+                data: [50, 45, 55, 40, 60, 45, 35],
+                type: 'line',
+                smooth: true,
+                lineStyle: { color: '#000' }
+            }]
+        });
+
+        createChart('chart4', {
+            ...commonOptions,
+            series: [{
+                data: [320, 332, 301, 334, 390, 330, 320],
+                type: 'line',
+                smooth: true,
+                lineStyle: { color: '#000' }
+            }]
+        });
+
+        createChart('chart5', {
+            ...commonOptions,
+            series: [{
+                data: [220, 182, 191, 234, 290, 330, 310],
+                type: 'line',
+                smooth: true,
+                lineStyle: { color: '#000' }
+            }]
+        });
+
+        createChart('chart6', {
+            ...commonOptions,
+            series: [{
+                data: [150, 232, 201, 154, 190, 330, 410],
+                type: 'line',
+                smooth: true,
+                lineStyle: { color: '#000' }
+            }]
+        });
+
+        createChart('chart7', {
+            ...commonOptions,
+            grid: { top: 4, right: 4, bottom: 4, left: 4 },
+            xAxis: { show: false },
+            yAxis: { show: false },
+            series: [{
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: 'line',
+                smooth: true,
+                lineStyle: { color: '#000' }
+            }]
+        });
+
+        createChart('chart8', {
+            ...commonOptions,
+            grid: { top: 4, right: 4, bottom: 4, left: 4 },
+            xAxis: { show: false },
+            yAxis: { show: false },
+            series: [{
+                data: [120, 200, 150, 80, 70, 110, 130],
+                type: 'line',
+                smooth: true,
+                lineStyle: { color: '#000' }
+            }]
+        });
+
+        createChart('chart9', {
+            ...commonOptions,
+            grid: { top: 4, right: 4, bottom: 4, left: 4 },
+            xAxis: { show: false },
+            yAxis: { show: false },
+            series: [{
+                data: [50, 45, 55, 40, 60, 45, 35],
+                type: 'line',
+                smooth: true,
+                lineStyle: { color: '#000' }
+            }]
+        });
+    </script></body>
+</html>

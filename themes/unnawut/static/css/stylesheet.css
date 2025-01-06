@@ -161,6 +161,14 @@ footer {
   color: #000c;
 }
 
+.post-content hr {
+  max-width: 40rem;
+  margin: 0;
+  margin-top: 3rem;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
 /*
   Footer
 */

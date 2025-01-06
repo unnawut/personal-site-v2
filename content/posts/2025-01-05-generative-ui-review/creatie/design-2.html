@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Ethereum Analytics Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius='small'></script>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-8">                    <img src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Ethereum Analytics" class="h-8 w-auto">                    <div class="hidden md:flex space-x-8">
+                        <a href="#" class="text-gray-900 hover:text-custom">Dashboard</a>
+                        <a href="#" class="text-gray-500 hover:text-custom">Network</a>
+                        <a href="#" class="text-gray-500 hover:text-custom">DeFi</a>
+                        <a href="#" class="text-gray-500 hover:text-custom">Developers</a>
+                    </div>
+                </div>                <div class="flex items-center space-x-4">
+                    <button class="!rounded-button bg-custom text-white px-4 py-2 text-sm font-medium">Connect Wallet</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <section class="relative h-screen flex items-center justify-center bg-white overflow-hidden">            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <h1 class="text-6xl font-bold tracking-tight text-gray-900 mb-8">                        Total Value Locked
+                        <span class="block text-8xl mt-4 font-['JetBrains_Mono'] text-custom">$45.7B</span>
+                    </h1>
+                    <p class="mt-6 text-xl text-gray-500 max-w-3xl mx-auto">
+                        Real-time analytics and insights into Ethereum's ecosystem growth and adoption
+                    </p>                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white border-y border-gray-100">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">                <div class="flex overflow-x-auto pb-4 space-x-8 font-['JetBrains_Mono']">
+                    <div class="flex-none">                        <div class="text-sm text-gray-500">Market Cap</div>
+                        <div class="text-2xl font-medium">$219.8B</div>
+                    </div>
+                    <div class="flex-none">
+                        <div class="text-sm text-gray-500">Daily Transactions</div>
+                        <div class="text-2xl font-medium">1.2M</div>
+                    </div>
+                    <div class="flex-none">                        <div class="text-sm text-gray-500">Active Addresses</div>
+                        <div class="text-2xl font-medium">567.3K</div>
+                    </div>
+                    <div class="flex-none">
+                        <div class="text-sm text-gray-500">Avg Gas Price</div>
+                        <div class="text-2xl font-medium">25 GWEI</div>
+                    </div>
+                </div>            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-sm p-6">                        <h3 class="text-lg font-medium mb-4">Daily Active Users</h3>
+                        <div id="dailyUsers" class="h-64"></div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-medium mb-4">Transaction Volume</h3>
+                        <div id="txVolume" class="h-64"></div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">                        <h3 class="text-lg font-medium mb-4">Gas Usage</h3>
+                        <div id="gasUsage" class="h-64"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-12">Network Growth</h2>                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-8">
+                        <div class="bg-gray-50 p-8 rounded-lg">                            <div class="text-4xl font-['JetBrains_Mono'] font-medium mb-2">2.1M</div>
+                            <div class="text-gray-500">Smart Contracts Deployed</div>
+                        </div>
+                        <div class="bg-gray-50 p-8 rounded-lg">
+                            <div class="text-4xl font-['JetBrains_Mono'] font-medium mb-2">98.7%</div>
+                            <div class="text-gray-500">Network Uptime</div>
+                        </div>
+                    </div>                    <div id="networkGrowth" class="h-96"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-12">DeFi Metrics</h2>                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <button class="flex items-center justify-between w-full text-left">                            <span class="text-lg font-medium">Lending Protocols</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mt-4">
+                            <div id="lendingMetrics" class="h-64"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">                        <button class="flex items-center justify-between w-full text-left">
+                            <span class="text-lg font-medium">DEX Volume</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mt-4">                            <div id="dexVolume" class="h-64"></div>
+                        </div>
+                    </div>
+                </div>            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">                <h2 class="text-3xl font-bold mb-12">Developer Activity</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="text-3xl font-['JetBrains_Mono'] font-medium mb-2">23.4K</div>
+                        <div class="text-gray-500">Active Developers</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">                        <div class="text-3xl font-['JetBrains_Mono'] font-medium mb-2">187K</div>
+                        <div class="text-gray-500">GitHub Commits</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="text-3xl font-['JetBrains_Mono'] font-medium mb-2">5.2K</div>
+                        <div class="text-gray-500">Open Source Projects</div>
+                    </div>
+                </div>            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-100">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-sm font-medium text-gray-900 mb-4">Data Sources</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li>Etherscan</li>
+                        <li>DeFi Pulse</li>
+                        <li>Dune Analytics</li>
+                        <li>CoinGecko</li>
+                    </ul>                </div>
+                <div>
+                    <h4 class="text-sm font-medium text-gray-900 mb-4">Network Stats</h4>                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li>Block Height: 18,234,567</li>
+                        <li>Validators: 894,321</li>
+                        <li>Network Hash Rate: 1.2 TH/s</li>
+                    </ul>
+                </div>                <div>
+                    <h4 class="text-sm font-medium text-gray-900 mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">                        <li>Documentation</li>
+                        <li>API Access</li>
+                        <li>Developer Portal</li>                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-medium text-gray-900 mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li>support@ethereum-analytics.com</li>                        <li>Twitter: @EthAnalytics</li>
+                        <li>Discord Community</li>
+                    </ul>                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function initCharts() {
+            const charts = {
+                dailyUsers: {
+                    title: 'Daily Active Users',
+                    data: [150000, 165000, 180000, 168000, 172000, 190000, 185000]
+                },
+                txVolume: {
+                    title: 'Transaction Volume (ETH)',
+                    data: [250000, 280000, 310000, 290000, 320000, 350000, 330000]
+                },
+                gasUsage: {
+                    title: 'Gas Usage (GWEI)',
+                    data: [25, 30, 28, 32, 27, 29, 31]
+                },
+                networkGrowth: {
+                    title: 'Network Growth',
+                    data: [1000000, 1200000, 1400000, 1600000, 1800000, 2000000, 2100000]
+                },
+                lendingMetrics: {
+                    title: 'Total Value Locked in Lending ($B)',
+                    data: [10.2, 12.5, 15.8, 14.3, 16.7, 18.2, 17.5]
+                },
+                dexVolume: {
+                    title: 'DEX Trading Volume ($B)',
+                    data: [8.5, 9.2, 11.5, 10.8, 12.3, 13.7, 12.9]
+                }
+            };
+
+            Object.entries(charts).forEach(([id, config]) => {
+                const chart = echarts.init(document.getElementById(id));
+                const option = {
+                    animation: false,
+                    title: {
+                        text: config.title,
+                        show: false
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        axisLine: {
+                            lineStyle: {
+                                color: '#eee'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLine: {
+                            show: false
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                color: '#eee'
+                            }
+                        }
+                    },
+                    series: [{
+                        data: config.data,
+                        type: 'line',
+                        smooth: true,
+                        symbolSize: 8,
+                        itemStyle: {
+                            color: '#000'
+                        },
+                        lineStyle: {
+                            width: 2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(0,0,0,0.1)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(0,0,0,0)'
+                            }])
+                        }
+                    }],
+                    grid: {
+                        left: '8%',
+                        right: '4%',
+                        bottom: '8%',
+                        top: '8%',
+                        containLabel: true
+                    }
+                };
+                chart.setOption(option);
+            });
+        }
+
+        window.addEventListener('load', initCharts);
+        window.addEventListener('resize', () => {
+            Object.keys(charts).forEach(id => {
+                const chart = echarts.getInstanceByDom(document.getElementById(id));
+                chart && chart.resize();
+            });
+        });
+    </script></body>
+</html>

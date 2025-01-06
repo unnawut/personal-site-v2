@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Ethereum Analytics Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius='small'></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">                    <div class="flex items-center">
+                        <img src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Ethereum Analytics" class="h-8 w-auto">                        <span class="ml-3 text-xl font-semibold">Ethereum Analytics</span>
+                    </div>
+                </div>                <div class="flex items-center space-x-4">
+                    <button class="!rounded-button bg-custom text-white px-4 py-2 text-sm font-medium">Connect Wallet</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-6xl font-bold mb-6">$89.2B</h1>
+                <p class="text-2xl text-gray-600 mb-8">Total Value Locked in Ethereum</p>
+                <div class="flex justify-center space-x-4">                    <button class="!rounded-button bg-custom text-white px-6 py-3">Explore Analytics</button>
+                    <button class="!rounded-button border border-custom text-custom px-6 py-3">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-white">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">                <div class="flex overflow-x-auto pb-4 space-x-8">
+                    <div class="flex-none">
+                        <div class="text-4xl font-mono font-bold">$356.2B</div>
+                        <div class="text-sm text-gray-500">Market Cap</div>
+                    </div>
+                    <div class="flex-none">                        <div class="text-4xl font-mono font-bold">1.2M</div>
+                        <div class="text-sm text-gray-500">Daily Transactions</div>
+                    </div>
+                    <div class="flex-none">
+                        <div class="text-4xl font-mono font-bold">712K</div>
+                        <div class="text-sm text-gray-500">Active Addresses</div>
+                    </div>
+                    <div class="flex-none">                        <div class="text-4xl font-mono font-bold">25 Gwei</div>
+                        <div class="text-sm text-gray-500">Average Gas Price</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-lg font-semibold mb-4">Price History</h3>
+                        <div id="priceChart" class="h-64"></div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">                        <h3 class="text-lg font-semibold mb-4">Transaction Volume</h3>
+                        <div id="txChart" class="h-64"></div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-lg font-semibold mb-4">Gas Usage</h3>
+                        <div id="gasChart" class="h-64"></div>
+                    </div>
+                </div>
+            </div>        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8">Network Growth</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 rounded-lg p-8">                        <div class="text-5xl font-bold mb-4">+127%</div>
+                        <div class="text-xl text-gray-600">Year-over-Year Growth</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-8">
+                        <div class="text-5xl font-bold mb-4">2.1M</div>
+                        <div class="text-xl text-gray-600">Smart Contracts Deployed</div>
+                    </div>
+                </div>            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">                <h2 class="text-3xl font-bold mb-8">DeFi Statistics</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-6">                        <div class="flex justify-between items-center cursor-pointer">
+                            <h3 class="text-lg font-semibold">Lending Protocols</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mt-4">                            <div id="lendingChart" class="h-64"></div>
+                        </div>
+                    </div>                    <div class="bg-white rounded-lg p-6">
+                        <div class="flex justify-between items-center cursor-pointer">                            <h3 class="text-lg font-semibold">DEX Volume</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mt-4">
+                            <div id="dexChart" class="h-64"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8">Developer Activity</h2>                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <div class="text-4xl font-bold mb-2">4,892</div>
+                        <div class="text-gray-600">Active Developers</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">                        <div class="text-4xl font-bold mb-2">267K</div>
+                        <div class="text-gray-600">GitHub Commits</div>                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <div class="text-4xl font-bold mb-2">1,423</div>
+                        <div class="text-gray-600">Open Source Projects</div>
+                    </div>
+                </div>            </div>
+        </section>
+
+        <footer class="bg-gray-50 border-t border-gray-200">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-4">Data Sources</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>Etherscan</li>                            <li>DeFi Pulse</li>
+                            <li>CoinGecko</li>
+                            <li>GitHub</li>                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-4">Updates</h4>
+                        <p class="text-sm text-gray-600">Last updated: 5 minutes ago</p>
+                    </div>
+                </div>            </div>
+        </footer>
+    </main>
+
+    <script>
+        function initCharts() {
+            const chartOptions = {
+                animation: false,
+                xAxis: {
+                    type: 'category',
+                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                    data: [820, 932, 901, 934, 1290, 1330],
+                    type: 'line',
+                    smooth: true
+                }]
+            };
+
+            const charts = ['priceChart', 'txChart', 'gasChart', 'lendingChart', 'dexChart'];
+            charts.forEach(id => {
+                const chart = echarts.init(document.getElementById(id));
+                chart.setOption(chartOptions);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initCharts);
+    </script></body>
+</html>

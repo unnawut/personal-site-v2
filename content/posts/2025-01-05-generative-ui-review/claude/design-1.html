@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Analytics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #fafafa;
+            color: #111;
+            line-height: 1.5;
+        }
+
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: linear-gradient(45deg, #000 25%, transparent 25%),
+                            linear-gradient(-45deg, #000 25%, transparent 25%),
+                            linear-gradient(45deg, transparent 75%, #000 75%),
+                            linear-gradient(-45deg, transparent 75%, #000 75%);
+            background-size: 20px 20px;
+            transform-origin: 0 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #666;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .stat-card .value {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .label {
+            color: #666;
+            font-size: 0.875rem;
+        }
+
+        .chart-section {
+            margin-bottom: 6rem;
+        }
+
+        .chart-section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .chart-section p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        footer {
+            background: white;
+            padding: 3rem;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .container {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-pattern" id="parallax"></div>
+        <div class="hero-content">
+            <h1>Ethereum Analytics</h1>
+            <p>Real-time insights into the Ethereum network</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="value">2.1M+</div>
+                <div class="label">Daily Active Addresses</div>
+                <div class="trend">↗ +12.3%</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">$89.4B</div>
+                <div class="label">Total Value Locked</div>
+                <div class="trend">↗ +8.7%</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">142.8</div>
+                <div class="label">Average Gas (Gwei)</div>
+                <div class="trend">↗ +5.2%</div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2>Network Activity</h2>
+            <p>Daily transaction volume and active addresses over time</p>
+            <div class="chart-container">
+                <canvas id="transactionsChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2>User Growth</h2>
+            <p>Monthly active addresses and new wallet creation</p>
+            <div class="chart-grid">
+                <div class="chart-container">
+                    <canvas id="activeAddressesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="newWalletsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2>Network Health</h2>
+            <p>Gas prices and network utilization metrics</p>
+            <div class="chart-container">
+                <canvas id="gasChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Real-time Ethereum network statistics and analytics</p>
+    </footer>
+
+    <script>
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const parallax = document.getElementById('parallax');
+            const scrolled = window.pageYOffset;
+            parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+
+        // Chart.js configuration
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: 'rgba(0,0,0,0.05)'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        };
+
+        // Generate sample data
+        const dates = Array.from({length: 30}, (_, i) => `2024-${String(i + 1).padStart(2, '0')}-01`);
+        
+        // Transactions Chart
+        new Chart(document.getElementById('transactionsChart'), {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    data: dates.map(() => Math.floor(Math.random() * 1000000) + 500000),
+                    borderColor: '#000',
+                    backgroundColor: 'rgba(0,0,0,0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: commonOptions
+        });
+
+        // Active Addresses Chart
+        new Chart(document.getElementById('activeAddressesChart'), {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    data: dates.map(() => Math.floor(Math.random() * 500000) + 200000),
+                    borderColor: '#000',
+                    tension: 0.4
+                }]
+            },
+            options: commonOptions
+        });
+
+        // New Wallets Chart
+        new Chart(document.getElementById('newWalletsChart'), {
+            type: 'bar',
+            data: {
+                labels: dates,
+                datasets: [{
+                    data: dates.map(() => Math.floor(Math.random() * 50000) + 10000),
+                    backgroundColor: 'rgba(0,0,0,0.1)'
+                }]
+            },
+            options: commonOptions
+        });
+
+        // Gas Chart
+        new Chart(document.getElementById('gasChart'), {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    data: dates.map(() => Math.floor(Math.random() * 100) + 50),
+                    borderColor: '#000',
+                    tension: 0.4
+                }]
+            },
+            options: commonOptions
+        });
+    </script>
+</body>
+</html>
