@@ -141,6 +141,19 @@ Overall, I would say Creatie serves what I need the most. It was able to take in
 
 I'll probably spend more time on Creatie in the future to get the designs I need for my website(s).
 
+
+---
+
+## Tool 8: Bolt - https://bolt.new/
+
+_(Added Jan 7, 2024)_
+
+Bolt has almost the same interface as v0. Its prompt response and output are also almost the same. Why?
+
+{{<figure src="bolt/interface.png" title="Bolt - Screenshot of the interface and the generated site">}}
+
+I'm not sure how to compare between Bolt and v0 since they're almost the same in all aspects.
+
 ---
 
 ## Others
